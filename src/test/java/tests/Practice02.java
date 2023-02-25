@@ -3,7 +3,7 @@ package tests;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.HerokuPage;
+import pages.HerOkuPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -28,7 +28,7 @@ public class Practice02 {
     @Test (dataProvider = "kullanici")
     public void testName(String email,String password) throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("herokuUrl"));
-        HerokuPage obj =new HerokuPage();
+        HerOkuPage obj =new HerOkuPage();
         obj.email.sendKeys(email);
         Thread.sleep(2000);
         obj.password.sendKeys(password);
